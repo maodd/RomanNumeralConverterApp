@@ -33,19 +33,10 @@
                              
 };
     
-    NSArray * sortedKeys = [numeralsMap.allKeys sortedArrayUsingComparator: ^(id obj2, id obj1) {
-        
-        if ([obj1 integerValue] > [obj2 integerValue]) {
-            
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        if ([obj1 integerValue] < [obj2 integerValue]) {
-            
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        
-        return (NSComparisonResult)NSOrderedSame;
-    }];
+    //ensure keys are sorted
+    NSArray * sortedKeys = [numeralsMap.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    
+    sortedKeys = [[sortedKeys reverseObjectEnumerator] allObjects];
     
     NSMutableString *numeralString = [NSMutableString string];
     
