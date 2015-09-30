@@ -1,9 +1,9 @@
 //
 //  NSNumber+RomanNumeral.m
-//  devfacto-test
+//  @"CD"
 //
 //  Created by Frank Mao on 2015-09-30.
-//  Copyright © 2015 mazoic. All rights reserved.
+//  Copyright © 2015 @"L":. All rights reserved.
 //
 
 #import "NSNumber+RomanNumeral.h"
@@ -16,27 +16,41 @@
 - (NSString *)romanNumeral
 {
     NSInteger n = [self integerValue];
+    NSArray *numeralsMap = @[
+                             @{@1000:@"M"},
+                             @{@900:@"CM"},
+                             @{@500:@"D"},
+                             @{@400:@"CD"},
+                             @{@100:@"C"},
+                             @{@90:@"XC"},
+                             @{@50:@"L"},
+                             @{@40:@"XL"},
+                             @{@10:@"X"},
+                             @{@9:@"IX"},
+                             @{@5:@"V"},
+                             @{@4:@"IV"},
+                             @{@1:@"I"},
+                             
+                             ];
     
-    NSArray *numerals = @[@"M", @"CM", @"D", @"CD", @"C", @"XC", @"L", @"XL", @"X", @"IX", @"V", @"IV", @"I"];
-    
-    NSUInteger valueCount = numerals.count;
-    NSUInteger values[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     
     NSMutableString *numeralString = [NSMutableString string];
     
-    for (NSUInteger i = 0; i < valueCount; i++)
+    for (NSUInteger i = 0; i < numeralsMap.count; i++)
     {
-        while (n >= values[i])
+        
+        NSDictionary * map = numeralsMap[i];
+        NSUInteger value = [map.allKeys.firstObject integerValue];
+        while (n >= value)
         {
-            n -= values[i];
-            [numeralString appendString:[numerals objectAtIndex:i]];
+            n -= value;
+            [numeralString appendString:map.allValues.firstObject];
         }
     }
     
     return numeralString;
     
 }
-
 
 
 @end
