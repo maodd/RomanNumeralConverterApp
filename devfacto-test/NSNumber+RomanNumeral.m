@@ -16,35 +16,48 @@
 - (NSString *)romanNumeral
 {
     NSInteger n = [self integerValue];
-    NSArray *numeralsMap = @[
-                             @{@1000:@"M"},
-                             @{@900:@"CM"},
-                             @{@500:@"D"},
-                             @{@400:@"CD"},
-                             @{@100:@"C"},
-                             @{@90:@"XC"},
-                             @{@50:@"L"},
-                             @{@40:@"XL"},
-                             @{@10:@"X"},
-                             @{@9:@"IX"},
-                             @{@5:@"V"},
-                             @{@4:@"IV"},
-                             @{@1:@"I"},
+    NSDictionary *numeralsMap = @{
+                             @1000:@"M",
+                             @900:@"CM",
+                             @500:@"D",
+                             @400:@"CD",
+                             @100:@"C",
+                             @90:@"XC",
+                             @50:@"L",
+                             @40:@"XL",
+                             @10:@"X",
+                             @9:@"IX",
+                             @5:@"V",
+                             @4:@"IV",
+                             @1:@"I",
                              
-                             ];
+};
     
+    NSArray * sortedKeys = [numeralsMap.allKeys sortedArrayUsingComparator: ^(id obj2, id obj1) {
+        
+        if ([obj1 integerValue] > [obj2 integerValue]) {
+            
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        if ([obj1 integerValue] < [obj2 integerValue]) {
+            
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        
+        return (NSComparisonResult)NSOrderedSame;
+    }];
     
     NSMutableString *numeralString = [NSMutableString string];
     
-    for (NSUInteger i = 0; i < numeralsMap.count; i++)
+    for (NSUInteger i = 0; i < sortedKeys.count; i++)
     {
         
-        NSDictionary * map = numeralsMap[i];
-        NSUInteger value = [map.allKeys.firstObject integerValue];
+        NSNumber * key = sortedKeys[i];
+        NSUInteger value = key.integerValue;
         while (n >= value)
         {
             n -= value;
-            [numeralString appendString:map.allValues.firstObject];
+            [numeralString appendString:numeralsMap[key]];
         }
     }
     
