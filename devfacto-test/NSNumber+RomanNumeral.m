@@ -16,6 +16,15 @@
 - (NSString *)romanNumeral
 {
     NSInteger n = [self integerValue];
+    
+    
+    if  (n>5000
+         || n <0
+         ) {
+        return @"error: out of range";
+    }
+    
+    
     NSDictionary *numeralsMap = @{
                              @1000:@"M",
                              @900:@"CM",

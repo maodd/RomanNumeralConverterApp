@@ -15,6 +15,8 @@
 		6969A5EC1BBC356E0043D088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6969A5EA1BBC356E0043D088 /* LaunchScreen.storyboard */; };
 		6969A5F71BBC356E0043D088 /* devfacto_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A5F61BBC356E0043D088 /* devfacto_testTests.m */; };
 		6969A6091BBC372C0043D088 /* NSNumber+RomanNumeral.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A6081BBC372C0043D088 /* NSNumber+RomanNumeral.m */; settings = {ASSET_TAGS = (); }; };
+		6969A6101BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A60F1BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		6969A6131BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A6121BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		6969A5F81BBC356E0043D088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6969A6071BBC372C0043D088 /* NSNumber+RomanNumeral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RomanNumeral.h"; sourceTree = "<group>"; };
 		6969A6081BBC372C0043D088 /* NSNumber+RomanNumeral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RomanNumeral.m"; sourceTree = "<group>"; };
+		6969A60E1BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		6969A60F1BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		6969A6111BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		6969A6121BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 		6969A5DB1BBC356D0043D088 /* devfacto-test */ = {
 			isa = PBXGroup;
 			children = (
+				6969A6111BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				6969A6121BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				6969A60E1BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.h */,
+				6969A60F1BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.m */,
 				6969A5DF1BBC356D0043D088 /* AppDelegate.h */,
 				6969A5E01BBC356D0043D088 /* AppDelegate.m */,
 				6969A5E21BBC356D0043D088 /* ViewController.h */,
@@ -217,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6969A5E41BBC356D0043D088 /* ViewController.m in Sources */,
+				6969A6131BBC4E570043D088 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				6969A6101BBC4DC20043D088 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				6969A5E11BBC356D0043D088 /* AppDelegate.m in Sources */,
 				6969A6091BBC372C0043D088 /* NSNumber+RomanNumeral.m in Sources */,
 				6969A5DE1BBC356D0043D088 /* main.m in Sources */,
@@ -349,6 +361,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mazoic.devfacto-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -360,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mazoic.devfacto-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
