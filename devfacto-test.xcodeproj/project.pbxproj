@@ -14,6 +14,7 @@
 		6969A5E91BBC356D0043D088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6969A5E81BBC356D0043D088 /* Assets.xcassets */; };
 		6969A5EC1BBC356E0043D088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6969A5EA1BBC356E0043D088 /* LaunchScreen.storyboard */; };
 		6969A5F71BBC356E0043D088 /* devfacto_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A5F61BBC356E0043D088 /* devfacto_testTests.m */; };
+		6969A6091BBC372C0043D088 /* NSNumber+RomanNumeral.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969A6081BBC372C0043D088 /* NSNumber+RomanNumeral.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6969A5F21BBC356E0043D088 /* devfacto-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "devfacto-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6969A5F61BBC356E0043D088 /* devfacto_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = devfacto_testTests.m; sourceTree = "<group>"; };
 		6969A5F81BBC356E0043D088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6969A6071BBC372C0043D088 /* NSNumber+RomanNumeral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RomanNumeral.h"; sourceTree = "<group>"; };
+		6969A6081BBC372C0043D088 /* NSNumber+RomanNumeral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RomanNumeral.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				6969A5EA1BBC356E0043D088 /* LaunchScreen.storyboard */,
 				6969A5ED1BBC356E0043D088 /* Info.plist */,
 				6969A5DC1BBC356D0043D088 /* Supporting Files */,
+				6969A6071BBC372C0043D088 /* NSNumber+RomanNumeral.h */,
+				6969A6081BBC372C0043D088 /* NSNumber+RomanNumeral.m */,
 			);
 			path = "devfacto-test";
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			files = (
 				6969A5E41BBC356D0043D088 /* ViewController.m in Sources */,
 				6969A5E11BBC356D0043D088 /* AppDelegate.m in Sources */,
+				6969A6091BBC372C0043D088 /* NSNumber+RomanNumeral.m in Sources */,
 				6969A5DE1BBC356D0043D088 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
