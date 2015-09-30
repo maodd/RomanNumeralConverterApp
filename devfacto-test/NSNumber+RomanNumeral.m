@@ -33,17 +33,20 @@
                              
 };
     
-    //ensure keys are sorted
+    // ensure keys are sorted
     NSArray * sortedKeys = [numeralsMap.allKeys sortedArrayUsingSelector:@selector(compare:)];
     
+    // reverse
     sortedKeys = [[sortedKeys reverseObjectEnumerator] allObjects];
     
+    
+    
+    // match by value
     NSMutableString *numeralString = [NSMutableString string];
     
-    for (NSUInteger i = 0; i < sortedKeys.count; i++)
-    {
-        
-        NSNumber * key = sortedKeys[i];
+    
+    for (NSNumber * key in sortedKeys) {
+
         NSUInteger value = key.integerValue;
         while (n >= value)
         {
